@@ -1,0 +1,89 @@
+
+{
+    "servicios": [
+        {
+            "id": 1,
+            "nombre": "Creación de sitios web",
+            "descripcion": "Diseño y desarrollo de sitios web responsivos, adaptados a las necesidades de cada organización.",
+            "categoria": "Desarrollo web",
+            "icono": "fa-globe"
+        },
+        {
+            "id": 2,
+            "nombre": "Configuración de servidores web Linux",
+            "descripcion": "Instalación, configuración y administración de servidores web Apache y Nginx en sistemas Linux.",
+            "categoria": "Administración de sistemas",
+            "icono": "fa-server"
+        },
+        {
+            "id": 3,
+            "nombre": "Desarrollo de aplicaciones web",
+            "descripcion": "Creación de aplicaciones web dinámicas, con interfaces interactivas y funcionalidades adaptadas a los usuarios.",
+            "categoria": "Desarrollo de software",
+            "icono": "fa-code"
+        },
+        {
+            "id": 4,
+            "nombre": "Desarrollo de aplicaciones móviles",
+            "descripcion": "Diseño y desarrollo de aplicaciones móviles para dispositivos Android e iOS.",
+            "categoria": "Desarrollo móvil",
+            "icono": "fa-mobile-screen-button"
+        },
+        {
+            "id": 5,
+            "nombre": "Creación y configuración de bases de datos relacionales",
+            "descripcion": "Diseño de esquemas, definición de relaciones, consultas SQL y configuración de bases de datos relacionales.",
+            "categoria": "Bases de datos",
+            "icono": "fa-database"
+        },
+        {
+            "id": 6,
+            "nombre": "Diseño y administración de bases de datos",
+            "descripcion": "Organización de estructuras de datos, optimización de consultas y mantenimiento de bases de datos.",
+            "categoria": "Bases de datos",
+            "icono": "fa-table"
+        },
+        {
+            "id": 7,
+            "nombre": "Desarrollo de API REST",
+            "descripcion": "Diseño e implementación de interfaces de programación para comunicar aplicaciones y servicios.",
+            "categoria": "Desarrollo de software",
+            "icono": "fa-plug"
+        },
+        {
+            "id": 8,
+            "nombre": "Administración de servidores Linux",
+            "descripcion": "Gestión de usuarios, grupos, permisos, servicios, paquetes y recursos del sistema operativo Linux.",
+            "categoria": "Administración de sistemas",
+            "icono": "fa-terminal"
+        },
+        {
+            "id": 9,
+            "nombre": "Seguridad y endurecimiento de servidores",
+            "descripcion": "Aplicación de controles de acceso, configuración segura de SSH, reglas de firewall y revisión de registros.",
+            "categoria": "Seguridad informática",
+            "icono": "fa-shield-halved"
+        },
+        {
+            "id": 10,
+            "nombre": "Implementación de respaldos y recuperación",
+            "descripcion": "Configuración de copias de seguridad y procedimientos para restaurar archivos y configuraciones.",
+            "categoria": "Seguridad informática",
+            "icono": "fa-box-archive"
+        },
+        {
+            "id": 11,
+            "nombre": "Desarrollo de sistemas de inventario",
+            "descripcion": "Creación de sistemas para administrar productos, existencias, movimientos y reportes de inventario.",
+            "categoria": "Sistemas empresariales",
+            "icono": "fa-warehouse"
+        },
+        {
+            "id": 12,
+            "nombre": "Automatización de tareas administrativas",
+            "descripcion": "Desarrollo de scripts y herramientas para automatizar procesos repetitivos y facilitar la administración de sistemas.",
+            "categoria": "Automatización",
+            "icono": "fa-gears"
+        }
+    ]
+}

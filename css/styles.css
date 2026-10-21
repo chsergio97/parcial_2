@@ -1,0 +1,480 @@
+/*DISEÑO GENERAL DE LA PAGINA*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+
+/* Contenedor centrado, similar a Bootstrap */
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Cabecera fija */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #173f46;
+    color: white;
+    z-index: 1000;
+}
+
+/* Identidad y menú en una sola fila */
+.header-content {
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+/* Identidad del sitio */
+.brand h1 {
+    margin: 0;
+    font-size: 28px;
+    white-space: nowrap;
+}
+
+/* Menú alineado a la derecha */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Botones */
+nav button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    background: #285b63;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+nav button:hover,
+nav button.activo {
+    background: #d9a441;
+    color: #222;
+}
+
+/* Contenido principal */
+main {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 120px 15px 30px;
+}
+
+/* Contenido de cada vista */
+.contenido-pagina {
+    padding: 25px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #00000010;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 650px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .brand h1 {
+        font-size: 24px;
+    }
+
+    main {
+        padding-top: 170px;
+    }
+}
+
+/*
+*
+*DISEÑO PAGINA "NOSOTROS"
+*
+*
+*/
+
+/* Encabezado de la sección */
+.descripcion-equipo {
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+/* Cuadrícula de integrantes */
+.equipo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* Tarjeta individual */
+.tarjeta-integrante {
+    background: #ffffff;
+    padding: 30px 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.tarjeta-integrante:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px #00000012;
+}
+
+/* Contenedor del icono */
+.integrante-icono {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e1eff0;
+    color: #173f46;
+    font-size: 32px;
+}
+
+/* Nombre */
+.tarjeta-integrante h3 {
+    margin: 0 0 10px;
+    color: #173f46;
+    font-size: 18px;
+}
+
+/* Carrera */
+.tarjeta-integrante p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Tabletas */
+@media (max-width: 900px) {
+    .equipo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Móviles */
+@media (max-width: 550px) {
+    .equipo-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/*
+*
+*
+*DISEÑO DE PAGINA SERVICIOS
+*
+*
+*/
+
+/* Buscador */
+.busqueda-servicios {
+    margin: 25px 0 15px;
+}
+
+#buscarServicio {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+#buscarServicio:focus {
+    border-color: #173f46;
+    box-shadow: 0 0 0 3px #173f4620;
+}
+
+/* Contador */
+.contador-servicios {
+    margin-bottom: 20px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* Cuadrícula */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* Tarjeta */
+.tarjeta-servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.tarjeta-servicio:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px #00000012;
+}
+
+/* Icono */
+.servicio-icono {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    background: #e1eff0;
+    color: #173f46;
+    font-size: 24px;
+}
+
+/* Título y descripción */
+.tarjeta-servicio h3 {
+    margin: 0 0 12px;
+    color: #173f46;
+    font-size: 19px;
+}
+
+.tarjeta-servicio > p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Categoría */
+.servicio-categoria {
+    margin-top: auto;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #e1eff0;
+    color: #173f46;
+    font-size: 12px;
+}
+
+.tarjeta-servicio .servicio-puerto {
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+/* Tabletas */
+@media (max-width: 900px) {
+    .servicios-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Móviles */
+@media (max-width: 550px) {
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*
+*
+*DISEÑO DE PAGINA HOME
+*
+*/
+
+
+/* Página de bienvenida */
+.inicio {
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Sección principal */
+.bienvenida {
+    padding: 55px 40px;
+    background: #173f46;
+    color: #ffffff;
+    border-radius: 14px;
+}
+
+.etiqueta-bienvenida {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #285b63;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.bienvenida h2 {
+    max-width: 650px;
+    margin: 0 0 20px;
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.bienvenida-descripcion {
+    max-width: 700px;
+    margin-bottom: 28px;
+    color: #e0eeee;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Botones de bienvenida */
+.bienvenida-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.bienvenida-acciones button {
+    padding: 12px 18px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-principal {
+    background: #d9a441;
+    color: #222222;
+}
+
+.btn-principal:hover {
+    background: #edbd5d;
+}
+
+.btn-secundario {
+    background: transparent;
+    border-color: #ffffff !important;
+    color: #ffffff;
+}
+
+.btn-secundario:hover {
+    background: #285b63;
+}
+
+/* Resumen del proyecto */
+.resumen-proyecto {
+    padding: 40px 0;
+}
+
+.resumen-proyecto > h2 {
+    margin: 0 0 25px;
+    color: #173f46;
+    font-size: 25px;
+}
+
+.resumen-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.resumen-card {
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+}
+
+.resumen-icono {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    background: #e1eff0;
+    color: #173f46;
+    font-size: 22px;
+}
+
+.resumen-card h3 {
+    margin: 0 0 12px;
+    color: #173f46;
+    font-size: 18px;
+}
+
+.resumen-card p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Cierre */
+.bienvenida-final {
+    margin-bottom: 25px;
+    padding: 30px;
+    border-left: 4px solid #d9a441;
+    background: #eaf1f2;
+    border-radius: 6px;
+}
+
+.bienvenida-final h2 {
+    margin-top: 0;
+    color: #173f46;
+}
+
+.bienvenida-final p {
+    margin-bottom: 0;
+    color: #475569;
+    line-height: 1.7;
+}
+
+/* Adaptación móvil */
+@media (max-width: 800px) {
+    .resumen-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bienvenida {
+        padding: 35px 25px;
+    }
+
+    .bienvenida h2 {
+        font-size: 29px;
+    }
+}
+
