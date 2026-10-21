@@ -121,20 +121,11 @@ $(document).ready(function () {
                             .addClass("servicio-categoria")
                             .text(servicio.categoria);
 
-                        const $puerto = $("<p>")
-                            .addClass("servicio-puerto")
-                            .text(
-                                servicio.puerto == null
-                                    ? "Puerto: No aplica"
-                                    : "Puerto: " + servicio.puerto
-                            );
-
                         $tarjeta.append(
                             $icono,
                             $titulo,
                             $descripcion,
-                            $categoria,
-                            $puerto
+                            $categoria
                         );
 
                         $lista.append($tarjeta);
@@ -162,8 +153,7 @@ $(document).ready(function () {
                                 const texto = [
                                     servicio.nombre,
                                     servicio.descripcion,
-                                    servicio.categoria,
-                                    servicio.puerto
+                                    servicio.categoria
                                 ].join(" ").toLowerCase();
 
                                 return texto.includes(busqueda);
